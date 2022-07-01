@@ -1,0 +1,9 @@
+# Python
+__pycache__/
+
+# Tortoise ORM
+aerich.ini
+migrations/
+
+# Env
+.env
