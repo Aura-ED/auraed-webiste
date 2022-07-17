@@ -1,7 +1,7 @@
 import express from 'express';
 import morgan from 'morgan';
 const blogRouter = require('./routes/blogRoutes');
-const galleryRouter = require('./routes/galleryRoutes');
+const eventRouter = require('./routes/eventRoutes');
 
 const app = express();
 
@@ -12,6 +12,6 @@ if (process.env.NODE_ENV == 'development') {
 }
 
 app.use('/api/blogs', blogRouter);
-app.use('/api/gallery', galleryRouter);
+app.use('/api/events', eventRouter);
 
 module.exports = app;
