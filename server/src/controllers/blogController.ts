@@ -1,16 +1,16 @@
 import { NextFunction, Request, Response } from 'express';
 import { Blog } from '../models/blogModel';
-import { AppError } from '../utils/appError';
+import { AppError, catchAsync } from '../utils/errorUtils';
 
-exports.getBlogs = async (req: Request, res: Response) => {
+exports.getBlogs = catchAsync(async (req: Request, res: Response) => {
   const blogs = await Blog.find().sort({ createdAt: -1 });
   res.status(200).json({
     status: 'success',
     blogs,
   });
-};
+});
 
-exports.createBlog = async (req: Request, res: Response) => {
+exports.createBlog = catchAsync(async (req: Request, res: Response) => {
   console.log(req.body);
   const blog = new Blog(req.body);
   await blog.save();
@@ -21,10 +21,10 @@ exports.createBlog = async (req: Request, res: Response) => {
       blog,
     },
   });
-};
+});
 
-exports.getBlog = async (req: Request, res: Response, next: NextFunction) => {
-  try {
+exports.getBlog = catchAsync(
+  async (req: Request, res: Response, next: NextFunction) => {
     const blog = await Blog.findById(req.params.id);
     if (!blog) {
       throw new AppError(404, 'Blog not Found!');
@@ -35,11 +35,10 @@ exports.getBlog = async (req: Request, res: Response, next: NextFunction) => {
         blog,
       },
     });
-  } catch (err) {
-    next(err);
   }
-};
-exports.updateBlog = async (req: Request, res: Response) => {
+);
+
+exports.updateBlog = catchAsync(async (req: Request, res: Response) => {
   const blog = await Blog.findByIdAndUpdate(req.params.id, req.body, {
     new: true,
     runValidators: true,
@@ -57,9 +56,9 @@ exports.updateBlog = async (req: Request, res: Response) => {
       blog,
     },
   });
-};
+});
 
-exports.deleteBlog = async (req: Request, res: Response) => {
+exports.deleteBlog = catchAsync(async (req: Request, res: Response) => {
   const blog = await Blog.findByIdAndDelete(req.params.id);
   if (!blog) {
     return res.status(404).json({
@@ -74,4 +73,4 @@ exports.deleteBlog = async (req: Request, res: Response) => {
       blog,
     },
   });
-};
+});
