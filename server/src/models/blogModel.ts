@@ -5,25 +5,26 @@ const blogSchema = new mongoose.Schema(
     title: {
       type: String,
       required: true,
-      maxlength: 150
+      maxlength: 150,
     },
     author: {
       type: String,
-      required: true
+      required: true,
     },
     description: {
       type: String,
       required: true,
-      maxlength: 250
+      maxlength: 250,
     },
     blogUrl: {
       type: String,
-      required: true
+      required: true,
+      unique: true,
     },
     thumbnail: {
       type: String,
-      required: true
-    }
+      required: true,
+    },
   },
   { timestamps: true }
 );

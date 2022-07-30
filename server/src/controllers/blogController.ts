@@ -11,7 +11,6 @@ exports.getBlogs = catchAsync(async (req: Request, res: Response) => {
 });
 
 exports.createBlog = catchAsync(async (req: Request, res: Response) => {
-  console.log(req.body);
   const blog = new Blog(req.body);
   await blog.save();
   res.status(201).json({
