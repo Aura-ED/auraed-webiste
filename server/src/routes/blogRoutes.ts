@@ -10,4 +10,4 @@ router
   .patch(blogController.updateBlog)
   .delete(blogController.deleteBlog);
 
-module.exports = router;
+export { router as blogRouter };

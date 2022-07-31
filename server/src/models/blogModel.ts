@@ -6,6 +6,7 @@ const blogSchema = new mongoose.Schema(
       type: String,
       required: true,
       maxlength: 150,
+      enum: ['', 'Mr.', 'Mrs.', 'Miss', 'Dr.'],
     },
     author: {
       type: String,
