@@ -4,10 +4,7 @@ const app = require('./app');
 import mongoose from 'mongoose';
 
 const port: number = +process.env.PORT! || 8000;
-const mongoUrl: string = process.env.DB_URI!.replace(
-  '<password>',
-  process.env.DB_PASS!
-);
+const mongoUrl: string = process.env.DB_URI!;
 
 mongoose.connect(mongoUrl).then(() => {
   console.log('Connected to MongoDB');
