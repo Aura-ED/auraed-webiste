@@ -64,7 +64,6 @@ export const handleError = (err: AppError, res: Response) => {
   if (process.env.NODE_ENV === 'production') {
     let error = { ...err };
     error.message = err.message;
-    console.log(error);
     if (err.name == 'CastError') error = handleCastErrorDB(error);
     else if (err.code === 11000) error = handleDuplicateFieldsDB(error);
     else if (err.name === 'ValidationError')
