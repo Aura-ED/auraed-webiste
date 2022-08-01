@@ -1,7 +1,7 @@
 import express from 'express';
 import morgan from 'morgan';
-const blogRouter = require('./routes/blogRoutes');
-const eventRouter = require('./routes/eventRoutes');
+import { blogRouter } from './routes/blogRoutes';
+import { eventRouter } from './routes/eventRoutes';
 import { Request, Response, NextFunction } from 'express';
 import { AppError, handleError } from './utils/errorUtils';
 
@@ -28,4 +28,4 @@ app.use((err: AppError, req: Request, res: Response, next: NextFunction) => {
   handleError(err, res);
 });
 
-module.exports = app;
+export default app;
