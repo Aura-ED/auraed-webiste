@@ -26,6 +26,10 @@ const blogSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
+    pinned: {
+      type: Boolean,
+      default: false,
+    },
   },
   { timestamps: true }
 );
