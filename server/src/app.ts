@@ -3,7 +3,7 @@ import morgan from 'morgan';
 const blogRouter = require('./routes/blogRoutes');
 const eventRouter = require('./routes/eventRoutes');
 import { Request, Response, NextFunction } from 'express';
-import { AppError, handleError } from './utils/appError';
+import { AppError, handleError } from './utils/errorUtils';
 
 const app = express();
 
