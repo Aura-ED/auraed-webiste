@@ -42,6 +42,7 @@ eventSchema.virtual('eventStatus').get(function () {
   const startDate = this.startDate;
   const endDate = this.endDate;
   if (endDate) {
+    console.log('Here!');
     if (now < startDate) {
       return 'Upcoming';
     } else if (now > startDate && now < endDate) {
@@ -53,9 +54,9 @@ eventSchema.virtual('eventStatus').get(function () {
     if (now < startDate) {
       return 'Upcoming';
     } else if (now > startDate) {
-      return 'Ongoing';
-    } else if (now > startDate) {
       return 'Ended';
+    } else {
+      return 'Ongoing';
     }
   }
 });
