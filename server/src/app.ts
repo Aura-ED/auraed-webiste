@@ -1,31 +1,32 @@
-import express from 'express';
-import morgan from 'morgan';
-import { blogRouter } from './routes/blogRoutes';
-import { eventRouter } from './routes/eventRoutes';
-import { Request, Response, NextFunction } from 'express';
-import { AppError, handleError } from './utils/errorUtils';
+import express from "express";
+import morgan from "morgan";
+import { Request, Response, NextFunction } from "express";
+import { AppError, handleError } from "./utils/errorUtils";
+import { NODE_ENV } from "./config";
+import { blogRouter } from "./controllers/blogController";
+import { eventRouter } from "./controllers/eventController";
+import { authRouter } from "./controllers/authController";
 
 const app = express();
 
+// Middlewares
 app.use(express.json());
-
-if (process.env.NODE_ENV == 'development') {
-  app.use(morgan('dev'));
+if (NODE_ENV === "development") {
+  app.use(morgan("dev"));
 }
 
-app.use('/api/blogs', blogRouter);
-app.use('/api/events', eventRouter);
+// Controllers
+app.use("/v1/blogs", blogRouter);
+app.use("/v1/events", eventRouter);
+app.use("/v1/auth", authRouter);
 
-app.use((err: AppError, req: Request, res: Response, next: NextFunction) => {
+// Error handlers
+app.use((err: AppError, _req: Request, res: Response, _next: NextFunction) => {
   handleError(err, res);
 });
 
-app.use('*', (req: Request, res: Response, next) => {
-  next(new AppError(404, '404 Not Found'));
+app.use("*", (_req: Request, _res: Response, next) => {
+  next(new AppError(404, "404 Not Found"));
 });
 
-app.use((err: AppError, req: Request, res: Response, next: NextFunction) => {
-  handleError(err, res);
-});
-
-export default app;
+app.listen(3000, () => console.log("Server is running on port 3000"));
