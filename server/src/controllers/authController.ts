@@ -4,8 +4,8 @@ import { prismaClient } from "../prisma";
 import bcrypt from "bcrypt";
 import * as jwt from "jsonwebtoken";
 import { JWT_ACCESS_SECRET, JWT_REFRESH_SECRET } from "../config";
-import { makeValidateBody } from "express-class-validator";
 import { LoginDto, RefreshTokenDto, SignupDto } from "../dto/auth.dto";
+import { makeValidateBody } from "../utils/validateBody";
 
 export const authRouter = Router();
 
@@ -35,7 +35,7 @@ authRouter.post(
       JWT_ACCESS_SECRET
     );
     const refreshToken = jwt.sign(
-      { id: user.id, tokenVersion: 1 },
+      { id: user.id, tokenVersion: user.tokenVersion },
       JWT_REFRESH_SECRET
     );
     res.status(200).json({
@@ -95,6 +95,7 @@ authRouter.post(
     ) as IRefreshTokenPayload;
     const user = await prismaClient.user.findUnique({
       where: { id },
+      select: { tokenVersion: true, id: true, role: true },
     });
     if (!user) {
       res.status(404).json({

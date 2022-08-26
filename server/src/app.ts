@@ -6,6 +6,8 @@ import { NODE_ENV } from "./config";
 import { blogRouter } from "./controllers/blogController";
 import { eventRouter } from "./controllers/eventController";
 import { authRouter } from "./controllers/authController";
+import { uploadRouter } from "./controllers/uploadController";
+import { metaRouter } from "./controllers/metaController";
 
 const app = express();
 
@@ -19,6 +21,8 @@ if (NODE_ENV === "development") {
 app.use("/v1/blogs", blogRouter);
 app.use("/v1/events", eventRouter);
 app.use("/v1/auth", authRouter);
+app.use("/v1/upload", uploadRouter);
+app.use("/v1/meta", metaRouter);
 
 // Error handlers
 app.use((err: AppError, _req: Request, res: Response, _next: NextFunction) => {

@@ -1,7 +1,7 @@
 import { Role } from "@prisma/client";
 import { Router } from "express";
 import expressAsyncHandler from "express-async-handler";
-import { makeValidateBody } from "express-class-validator";
+import { makeValidateBody } from "../utils/validateBody";
 import { CreateEventDto, UpdateEventDto } from "../dto/events.dto";
 import { hasRole } from "../middlewares/hasRole";
 import { isAuthenticated } from "../middlewares/isAuthenticated";
@@ -58,7 +58,7 @@ eventRouter.get(
 
 eventRouter.patch(
   "/:id",
-  [isAuthenticated, hasRole(Role.ADMIN), makeValidateBody(CreateEventDto)],
+  [isAuthenticated, hasRole(Role.ADMIN), makeValidateBody(UpdateEventDto)],
   expressAsyncHandler(async (req, res) => {
     const event = await prismaClient.event.update({
       where: { id: req.params.id },

@@ -1,5 +1,5 @@
 declare namespace Express {
   export interface Request {
-    user?: IAccessTokenPayload;
+    user?: import("@prisma/client").User;
   }
 }

@@ -1,18 +1,15 @@
-import { IsDate, IsNotEmpty, IsString, IsUrl, Length } from "class-validator";
+import { IsDateString, IsString, IsUrl, Length } from "class-validator";
 
 export class CreateEventDto {
   @IsString()
-  @IsNotEmpty()
   @Length(5, 255)
   title: string;
 
   @IsString()
-  @IsNotEmpty()
   @Length(5, 255)
   location: string;
 
   @IsString()
-  @IsNotEmpty()
   @Length(5, 255)
   description: string;
 
@@ -22,19 +19,11 @@ export class CreateEventDto {
   @IsString({ each: true })
   images: string[];
 
-  @IsDate()
+  @IsDateString()
   startDate: Date;
 
-  @IsDate()
+  @IsDateString()
   endDate: Date;
 }
 
-export class UpdateEventDto implements Partial<CreateEventDto> {
-  title?: string;
-  location?: string;
-  description?: string;
-  url?: string;
-  images?: string[];
-  startDate?: Date;
-  endDate?: Date;
-}
+export class UpdateEventDto implements Partial<CreateEventDto> {}

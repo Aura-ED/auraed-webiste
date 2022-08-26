@@ -5,7 +5,7 @@ export const hasRole: (role: Role) => RequestHandler =
   (role: Role) => (req, res, next) => {
     if (!req.user || req.user.role !== role) {
       res.status(403).json({
-        message: "Forbidden",
+        message: "You do not have permission to perform this action."
       });
       return;
     }

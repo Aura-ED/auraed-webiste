@@ -1,11 +1,11 @@
 import { Router } from "express";
-import { makeValidateBody } from "express-class-validator";
-import { CreateBlogDto } from "../dto/blogs.dto";
+import { CreateBlogDto, UpdateBlogDto } from "../dto/blogs.dto";
 import { prismaClient } from "../prisma";
 import expressAsyncHandler from "express-async-handler";
 import { isAuthenticated } from "../middlewares/isAuthenticated";
 import { hasRole } from "../middlewares/hasRole";
 import { Role } from "@prisma/client";
+import { makeValidateBody } from "../utils/validateBody";
 
 export const blogRouter = Router();
 
@@ -60,14 +60,14 @@ blogRouter.get(
   })
 );
 
-blogRouter.put(
+blogRouter.patch(
   "/:id",
-  [isAuthenticated, hasRole(Role.ADMIN), makeValidateBody(CreateBlogDto)],
+  [isAuthenticated, hasRole(Role.ADMIN), makeValidateBody(UpdateBlogDto, true)],
   expressAsyncHandler(async (req, res) => {
     const blog = await prismaClient.blog.update({
       where: { id: req.params.id },
       data: {
-        ...(req.body as CreateBlogDto),
+        ...(req.body as UpdateBlogDto),
       },
     });
     res.status(200).json({
