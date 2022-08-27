@@ -4,7 +4,9 @@
   "description": "Backend for AuraEd website.",
   "main": "app.js",
   "scripts": {
-    "dev": "tsc-watch --onSuccess \"node build/app.js\""
+    "dev": "tsc-watch --onSuccess \"node build/app.js\"",
+    "build": "tsc",
+    "start": "node build/app.js"
   },
   "repository": {
     "type": "git",
