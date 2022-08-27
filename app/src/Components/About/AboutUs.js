@@ -1,3 +1,4 @@
+import storyImage from '../../assets/images/events/image_15.jpeg';
 function AboutUs() {
   return (
     <section id="story" className="mt-20">
@@ -6,7 +7,7 @@ function AboutUs() {
         <div className="w-full md:w-1/2">
           <img
             className="mb-10 w-full h-[300px] lg:h-[350] object-cover rounded-2xl md:mb-0"
-            src="https://auraed.org/assets/images/about.webp"
+            src={storyImage}
             alt="story"
           />
         </div>
