@@ -1,5 +1,6 @@
 import express from "express";
 import morgan from "morgan";
+import cors from "cors";
 import { Request, Response, NextFunction } from "express";
 import { AppError, handleError } from "./utils/errorUtils";
 import { NODE_ENV } from "./config";
@@ -8,6 +9,7 @@ import { eventRouter } from "./controllers/eventController";
 import { authRouter } from "./controllers/authController";
 import { uploadRouter } from "./controllers/uploadController";
 import { metaRouter } from "./controllers/metaController";
+import { albumRouter } from "./controllers/albumController";
 
 const app = express();
 
@@ -16,6 +18,11 @@ app.use(express.json());
 if (NODE_ENV === "development") {
   app.use(morgan("dev"));
 }
+app.use(
+  cors({
+    origin: "*",
+  })
+);
 
 // Controllers
 app.use("/v1/blogs", blogRouter);
@@ -23,6 +30,7 @@ app.use("/v1/events", eventRouter);
 app.use("/v1/auth", authRouter);
 app.use("/v1/upload", uploadRouter);
 app.use("/v1/meta", metaRouter);
+app.use("/v1/albums", albumRouter);
 
 // Error handlers
 app.use((err: AppError, _req: Request, res: Response, _next: NextFunction) => {

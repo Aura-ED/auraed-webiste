@@ -49,9 +49,10 @@ model Event {
   updatedAt DateTime @updatedAt
 }
 
-model Meta {
-  id      String   @id
-  members String[]
+model Album {
+  id     String   @id @default(cuid())
+  name   String
+  images String[]
 
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
