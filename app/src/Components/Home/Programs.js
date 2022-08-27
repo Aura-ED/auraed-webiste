@@ -1,3 +1,7 @@
+import image1 from '../../assets/images/events/image_10.jpeg';
+import image2 from '../../assets/images/events/image_13.jpeg';
+import image3 from '../../assets/images/events/image_08.jpg';
+
 function Programs() {
   return (
     <section id="programs" className="mt-20">
@@ -6,7 +10,7 @@ function Programs() {
         <div className="self-center text-center space-y-3">
           <h2 className="text-3xl font-bold">What We Do</h2>
           <p className="text-sm max-w-2xl font-semibold text-dark">
-            We are a non-profital organization focusing on child education with
+            We are a non-profit organization focussing on child education with
             technology.
           </p>
         </div>
@@ -20,13 +24,13 @@ function Programs() {
                 Interactive Contents
               </h3>
               <p className="text-sm">
-                We are a non-profital organization focusing on child education
+                We are a non-profit organization focusing on child education
                 with technology.
               </p>
             </div>
             <img
               className="mt-4 rounded-lg w-full h-[200px] object-cover"
-              src="https://auraed.org/assets/images/events/image_08.webp"
+              src={image2}
               alt=""
             />
           </div>
@@ -45,7 +49,7 @@ function Programs() {
             </div>
             <img
               className="mt-4 rounded-lg w-full h-[200px] object-cover"
-              src="https://auraed.org/assets/images/events/image_06.webp"
+              src={image1}
               alt=""
             />
           </div>
@@ -63,7 +67,7 @@ function Programs() {
             </div>
             <img
               className="mt-4 justify-end rounded-lg w-full h-[200px] object-cover"
-              src="https://auraed.org/assets/images/events/image_04.webp"
+              src={image3}
               alt=""
             />
           </div>

@@ -1,18 +1,18 @@
-import mailSvg from "../assets/mail.svg";
-import facebookSvg from "../assets/facebook.svg";
-import twitterSvg from "../assets/twitter.svg";
-import instagramSvg from "../assets/instagram.svg";
-import linkedinSvg from "../assets/linkedin.svg";
-import logo from "../assets/logo.png";
-import { Link } from "react-router-dom";
+import mailSvg from '../assets/mail.svg';
+import facebookSvg from '../assets/facebook.svg';
+import twitterSvg from '../assets/twitter.svg';
+import instagramSvg from '../assets/instagram.svg';
+import linkedinSvg from '../assets/linkedin.svg';
+import logo from '../assets/logo.png';
+import { Link } from 'react-router-dom';
 
 function Navbar() {
   const changeToggleHandler = () => {
-    const btn = document.getElementById("menu-btn");
-    const nav = document.getElementById("menu");
-    btn.classList.toggle("open");
-    nav.classList.toggle("flex");
-    nav.classList.toggle("hidden");
+    const btn = document.getElementById('menu-btn');
+    const nav = document.getElementById('menu');
+    btn.classList.toggle('open');
+    nav.classList.toggle('flex');
+    nav.classList.toggle('hidden');
   };
 
   //     btn.addEventListener('click', () => {
@@ -20,32 +20,6 @@ function Navbar() {
   // })
   return (
     <>
-      {/* <!-- Contact Navbar --> */}
-      <div className="bg-primaryDark p-2">
-        <div className="container mx-auto flex justify-between items-center">
-          <div className="flex items-center space-x-2 text-sm text-white font-semibold">
-            <img className="w-[14px] h-[14px]" src={mailSvg} alt="mail" />
-            <span>info@auraed.org</span>
-          </div>
-
-          {/* <!-- Social Links --> */}
-          <div className="flex items-center justify-between space-x-2">
-            <a className="w-[9px] h-[14px] text-primary" href="#">
-              <img src={facebookSvg} alt="mail" />
-            </a>
-            <a className="w-[14px] h-[14px]" href="#">
-              <img src={twitterSvg} alt="mail" />
-            </a>
-            <a className="w-[14px] h-[14px]" href="#">
-              <img src={instagramSvg} alt="mail" />
-            </a>
-            <a className="w-[14px] h-[14px]" href="#">
-              <img src={linkedinSvg} alt="mail" />
-            </a>
-          </div>
-        </div>
-      </div>
-
       {/* <!-- Navbar --> */}
       <nav className="container mx-auto py-3 px-2 md:px-0 z-10">
         <div className="flex items-center justify-between">
@@ -99,7 +73,7 @@ function Navbar() {
             to="/donate"
             className="hidden py-2 px-6 font-bold text-white bg-primary rounded-xl baseline hover:bg-primaryDark md:block"
           >
-            Donate Us
+            Donate
           </Link>
 
           {/* <!-- Hamburger Icon --> */}
@@ -161,7 +135,7 @@ function Navbar() {
               to="/donate"
               className="py-2 px-6 font-bold text-white bg-primary rounded-xl baseline hover:bg-primaryDark md:block"
             >
-              Donate Us
+              Donate
             </Link>
           </div>
         </div>
