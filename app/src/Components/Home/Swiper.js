@@ -33,7 +33,7 @@ function SwiperComp() {
         <SwiperSlide>
           <div
             style={{
-              backgroundImage: `url('https://auraed.org/assets/images/slider/slider-03.jpg')`,
+              backgroundImage: `url('https://auraed.org/assets/images/slider/slider-01.jpg')`,
               backgroundRepeat: "no-repeat",
               backgroundSize: "cover",
               backgroundPosition: "center",
@@ -60,7 +60,7 @@ function SwiperComp() {
         <SwiperSlide>
           <div
             style={{
-              backgroundImage: `url('https://auraed.org/assets/images/slider/slider-03.jpg')`,
+              backgroundImage: `url('https://auraed.org/assets/images/slider/slider-02.jpg')`,
               backgroundRepeat: "no-repeat",
               backgroundSize: "cover",
               backgroundPosition: "center",
