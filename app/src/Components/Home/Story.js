@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function Story() {
   return (
@@ -26,19 +27,19 @@ function Story() {
             </p>
           </div>
 
-          <a
-            href="#events"
+          <Link
+            to="/about"
             className="py-2 px-6 font-bold text-white bg-primary rounded-xl baseline hover:bg-primaryDark w-max"
           >
-            View Story
-          </a>
+            About us
+          </Link>
         </div>
 
         {/* <!-- Story Image --> */}
         <div className="w-full md:w-1/2">
           <img
             className="mb-10 w-full h-[300px] lg:h-[350] object-cover rounded-2xl md:mb-0"
-            src="https://auraed.org/assets/images/about.webp"
+            src="https://media.discordapp.net/attachments/830474921875734578/830484234057023499/image2.jpg?width=539&height=404"
             alt="story"
           />
         </div>

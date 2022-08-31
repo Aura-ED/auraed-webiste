@@ -4,9 +4,12 @@ import twitterSvg from '../assets/twitter.svg';
 import instagramSvg from '../assets/instagram.svg';
 import linkedinSvg from '../assets/linkedin.svg';
 import logo from '../assets/logo.png';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 function Navbar() {
+
+  const {pathname} = useLocation();
+
   const changeToggleHandler = () => {
     const btn = document.getElementById('menu-btn');
     const nav = document.getElementById('menu');
@@ -15,11 +18,39 @@ function Navbar() {
     nav.classList.toggle('hidden');
   };
 
-  //     btn.addEventListener('click', () => {
-  //
-  // })
+  const activeClass = "text-primaryDark font-bold hover:text-primaryDark hover:font-bold"
+  const defaultClass = "hover:text-primaryDark hover:font-bold"
+
   return (
     <>
+      {/* <!-- Contact Navbar --> */}
+    <div class="bg-primaryDark p-2">
+      <div class="container mx-auto flex justify-between items-center">
+        <div
+          class="flex items-center space-x-2 text-sm text-white font-semibold"
+        >
+          <img class="w-[14px] h-[14px]" src={mailSvg} alt="mail" />
+          <span>info@auraed.org</span>
+        </div>
+
+        {/* <!-- Social Links --> */}
+        <div class="flex items-center justify-between space-x-2">
+          <a class="w-[9px] h-[14px] text-primary" href="#">
+            <img src={facebookSvg} alt="facebook" />
+          </a>
+          <a class="w-[14px] h-[14px]" href="#">
+            <img src={twitterSvg} alt="twitter" />
+          </a>
+          <a class="w-[14px] h-[14px]" href="#">
+            <img src={instagramSvg} alt="instagram" />
+          </a>
+          <a class="w-[14px] h-[14px]" href="#">
+            <img src={linkedinSvg} alt="linkedin" />
+          </a>
+        </div>
+      </div>
+    </div>
+
       {/* <!-- Navbar --> */}
       <nav className="container mx-auto py-3 px-2 md:px-0 z-10">
         <div className="flex items-center justify-between">
@@ -32,35 +63,40 @@ function Navbar() {
           <div className="hidden text-dark space-x-6 md:flex">
             <Link
               to="/"
-              className="text-primaryDark font-bold hover:text-primaryDark hover:font-bold"
+              className={(pathname === '/') ? activeClass : defaultClass}
+              
             >
               Home
             </Link>
 
             <Link
               to="/blogs"
-              className="hover:text-primaryDark hover:font-bold"
+              className={(pathname === '/blogs') ? activeClass : defaultClass}
+              
             >
               Blogs
             </Link>
 
             <Link
               to="/albums"
-              className="hover:text-primaryDark hover:font-bold"
+              className={(pathname === '/albums') ? activeClass : defaultClass}
+              
             >
               Albums
             </Link>
 
             <Link
               to="/events"
-              className="hover:text-primaryDark hover:font-bold"
+              className={(pathname === '/events') ? activeClass : defaultClass}
+              
             >
               Events
             </Link>
 
             <Link
               to="/about"
-              className="hover:text-primaryDark hover:font-bold"
+              className={(pathname === '/about') ? activeClass : defaultClass}
+              
             >
               About
             </Link>
@@ -71,6 +107,7 @@ function Navbar() {
           </div>
           <Link
             to="/donate"
+
             className="hidden py-2 px-6 font-bold text-white bg-primary rounded-xl baseline hover:bg-primaryDark md:block"
           >
             Donate
@@ -95,34 +132,39 @@ function Navbar() {
           >
             <Link
               to="/"
-              className="text-primaryDark font-bold hover:text-primaryDark hover:font-bold"
+              onClick={changeToggleHandler}
+              className={(pathname === '/') ? activeClass : defaultClass}
             >
               Home
             </Link>
             <Link
               to="/blogs"
-              className="hover:text-primaryDark hover:font-bold"
+              onClick={changeToggleHandler}
+              className={(pathname === '/blogs') ? activeClass : defaultClass}
             >
               Blogs
             </Link>
 
             <Link
               to="/albums"
-              className="hover:text-primaryDark hover:font-bold"
+              onClick={changeToggleHandler}
+              className={(pathname === '/albums') ? activeClass : defaultClass}
             >
               Albums
             </Link>
 
             <Link
-              to="/about"
-              className="hover:text-primaryDark hover:font-bold"
+              to="/events"
+              onClick={changeToggleHandler}
+              className={(pathname === '/events') ? activeClass : defaultClass}
             >
               Events
             </Link>
 
             <Link
               to="/about"
-              className="hover:text-primaryDark hover:font-bold"
+              onClick={changeToggleHandler}
+              className={(pathname === '/about') ? activeClass : defaultClass}
             >
               About
             </Link>
@@ -133,6 +175,7 @@ function Navbar() {
 
             <Link
               to="/donate"
+              onClick={changeToggleHandler}
               className="py-2 px-6 font-bold text-white bg-primary rounded-xl baseline hover:bg-primaryDark md:block"
             >
               Donate

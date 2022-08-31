@@ -4,6 +4,7 @@ import { Dialog, Transition } from "@headlessui/react";
 
 import phonepaySvg from "../../assets/phonepay.png";
 import gofundmeSvg from "../../assets/gofundme.png";
+import phonepayQR from "../../assets/images/AuraPhonepayQR.png";
 import esewaSvg from "../../assets/esewa.svg";
 import logo from "../../assets/logo.png";
 import InputCopy from "./InputCopy";
@@ -103,13 +104,11 @@ function DonateInfo() {
                         </div>
                       </div>
                       <div className="flex flex-col spacey-2 items-center mt-10">
-                        <h1 className="text-xl font-bold text-primary mb-2">
-                          Scan the QR
-                        </h1>
-                        <div className="p-2 border-2 border-primary rounded-xl">
-                          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/QR_code_for_mobile_English_Wikipedia.svg/1200px-QR_code_for_mobile_English_Wikipedia.svg.png" />
-                        </div>
-                        <div className="flex w-full justify-between items-end mt-4 text-md font-bold rounded-xl">
+                        
+                        
+                          <img src={phonepayQR} alt="Auraed PhonePay QR Scan" />
+                        
+                        {/* <div className="flex w-full justify-between items-end mt-4 text-md font-bold rounded-xl">
                           <div>
                             <img
                               className="w-[140px]"
@@ -125,7 +124,7 @@ function DonateInfo() {
                               alt="aura"
                             />
                           </div>
-                        </div>
+                        </div> */}
                       </div>
                     </Dialog.Panel>
                   </div>
