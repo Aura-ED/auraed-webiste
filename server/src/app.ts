@@ -12,6 +12,7 @@ import { metaRouter } from './controllers/metaController';
 import { albumRouter } from './controllers/albumController';
 
 const app = express();
+app.disable('etag');
 
 // Middlewares
 app.use(express.json());
@@ -41,4 +42,4 @@ app.use('*', (_req: Request, _res: Response, next) => {
   next(new AppError(404, '404 Not Found'));
 });
 
-app.listen(3000, () => console.log('Server is running on port 3000'));
+app.listen(8000, () => console.log('Server is running on port 3000'));

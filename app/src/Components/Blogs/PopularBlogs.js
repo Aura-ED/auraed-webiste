@@ -1,4 +1,4 @@
-import readMoreArrow from "../../assets/read-more-arrow.svg";
+import readMoreArrow from '../../assets/read-more-arrow.svg';
 
 function PinnedBlogs({ blogs }) {
   return (
@@ -28,7 +28,7 @@ function PinnedBlogs({ blogs }) {
                     <p className="text-sm text-dark">{blog.description}</p>
                   </div>
 
-                  <a href={blog.url} target="_blank" rel="noreferrer">
+                  <a href={blog.blogUrl} target="_blank" rel="noreferrer">
                     <div className="flex items-center space-x-2 text-sm font-bold">
                       <span>Read More</span>
                       <img
