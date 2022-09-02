@@ -23,10 +23,10 @@ function Works({ allAlbums }) {
           {allAlbums.map((currAlbum, idx) => (
             <li
               className={
-                "font-semibold cursor-pointer text-md hover:text-primaryDark active active:text-primaryDark" +
+                "cursor-pointer " +
                 (album.name === currAlbum.name
-                  ? " text-primaryDark bg-primary"
-                  : " text-dark")
+                  ? "py-2 px-6 font-bold text-white bg-primary rounded-xl baseline hover:bg-primaryDark md:block"
+                  : "font-semibold text-md text-dark hover:text-primaryDark")
               }
               key={idx}
               onClick={() => changeAlbum(currAlbum.name)}
