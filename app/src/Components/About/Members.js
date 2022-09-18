@@ -42,7 +42,7 @@ function Members() {
     {
       name: 'Diwas Lamichhane',
       imageLink:
-        'https://media.discordapp.net/attachments/980147436196597820/1013205838669807738/unknown.png',
+        'https://images-ext-2.discordapp.net/external/yB3yXP9GE6OT-4D5oxcCMhhELhPOCO-4NIzvtHFrOPE/%3F_nc_cat%3D109%26ccb%3D1-7%26_nc_sid%3D174925%26_nc_ohc%3DBAoXtMXLhP4AX_XFaLg%26_nc_ht%3Dscontent.fktm8-1.fna%26oh%3D00_AT8mz6lyES2HXe1MAbucZfqrcBX7Kz4K4ccMFj4s4aA8ZA%26oe%3D6317E7B7/https/scontent.fktm8-1.fna.fbcdn.net/v/t39.30808-6/300195356_3888257658073410_6979674478170402837_n.jpg?width=403&height=403',
       position: 'Frontend Developer',
       socialLinks: [
         {
@@ -67,23 +67,23 @@ function Members() {
         <div class="flex flex-col justify-between mt-10 space-y-5 md:grid md:grid-cols-3 lg:grid-cols-4 md:gap-4 md:space-y-0">
           {/* <!-- Memeber 1 --> */}
           {members.map((member, idx) => (
-            <div key={idx} class="relative">
+            <div key={idx} class="relative cursor-pointer ">
               <img
                 class="rounded-xl w-full h-[200px] md:h-[300px] object-cover"
                 src={member.imageLink}
                 alt=""
               />
               <div class="absolute flex flex-col p-6 rounded-b-xl justify-between bottom-0 w-full h-3/3 bg-primary bg-opacity-70">
-                <div class="self-right text-center justify-between text-white">
+                <div class=" self-right text-center justify-between text-white">
                   <h4 class="text-xl font-bold">{member.name}</h4>
                   <p class="mt-1 text-md font-semibold">{member.position}</p>
                 </div>
                 {/* <!-- Social Links --> */}
                 <div class="flex justify-center space-x-2 pt-2">
-                  <a class="w-[8px] h-[9px] text-primary" href="#">
+                  <a class="w-[8px] h-[9px] text-primary"  href={member.socialLinks[0].link}>
                     <img
                       src={facebookSvg}
-                      href={member.socialLinks[0].link}
+                     
                       alt="facebook"
                     />
                   </a>

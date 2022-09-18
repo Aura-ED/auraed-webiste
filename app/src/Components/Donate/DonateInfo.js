@@ -29,7 +29,7 @@ function DonateInfo() {
         <div className="space-y-7 w-full self-center md:self-start md:w-1/3 text-center md:text-start md:items-start">
           <h2 className="text-3xl font-bold">Wallets</h2>
           <div className="flex flex-col space-y-3">
-            <a
+            {/* <a
               href="#"
               className="py-3 px-6 text-md bg-[#5FB946] font-bold rounded-xl"
             >
@@ -39,7 +39,7 @@ function DonateInfo() {
               <hr className="w-1/3" />
               <span className="text-md font-semibold">or</span>
               <hr className="w-1/3" />
-            </div>
+            </div> */}
             <div
               onClick={() => setIsOpen(true)}
               className="py-3 px-6 text-md bg-primaryLight font-bold rounded-xl cursor-pointer"
