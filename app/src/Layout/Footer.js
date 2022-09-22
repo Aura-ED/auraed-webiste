@@ -56,18 +56,18 @@ function Footer() {
                 </a>
 
                 {/* <!-- Social Links --> */}
-                <div className="flex justify-center md:justify-start space-x-2 pt-2">
-                  <a className="w-[8px] h-[9px] text-primary" href="#">
-                    <img src={facebookSvg} alt="mail" />
+                <div className="flex items-center justify-center md:justify-start space-x-2 pt-2">
+                  <a class="w-[8px] h-[13px] text-primary" href=" https://www.facebook.com/auraednepal">
+                    <img src={facebookSvg} alt="facebook" />
                   </a>
-                  <a className="w-[14px] h-[14px]" href="#">
-                    <img src={twitterSvg} alt="mail" />
+                  {/* <a class="w-[14px] h-[14px]" href="#">
+                      <img src={twitterSvg} alt="twitter" />
+                    </a> */}
+                  <a class="w-[14px] h-[14px]" href="https://www.instagram.com/auraednepal/">
+                    <img src={instagramSvg} alt="instagram" />
                   </a>
-                  <a className="w-[14px] h-[14px]" href="#">
-                    <img src={instagramSvg} alt="mail" />
-                  </a>
-                  <a className="w-[14px] h-[14px]" href="#">
-                    <img src={linkedinSvg} alt="mail" />
+                  <a class="w-[14px] h-[14px]" href="https://www.linkedin.com/company/71598016/">
+                    <img src={linkedinSvg} alt="linkedin" />
                   </a>
                 </div>
               </div>
