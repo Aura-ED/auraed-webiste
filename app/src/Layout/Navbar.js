@@ -30,6 +30,7 @@ function Navbar() {
           class="flex items-center space-x-2 text-sm text-white font-semibold"
         >
           <img class="w-[14px] h-[14px]" src={mailSvg} alt="mail" />
+<<<<<<< HEAD
           <a href='mailto:info@auraed.org'>info@auraed.org</a>
         </div>
 
@@ -45,6 +46,23 @@ function Navbar() {
             <img src={instagramSvg} alt="instagram" />
           </a>
           <a class="w-[14px] h-[14px]" href="https://www.linkedin.com/company/71598016/">
+=======
+          <span>info@auraed.org</span>
+        </div>
+
+        {/* <!-- Social Links --> */}
+        <div class="flex items-center justify-between space-x-2">
+          <a class="w-[9px] h-[14px] text-primary" href="#">
+            <img src={facebookSvg} alt="facebook" />
+          </a>
+          <a class="w-[14px] h-[14px]" href="#">
+            <img src={twitterSvg} alt="twitter" />
+          </a>
+          <a class="w-[14px] h-[14px]" href="#">
+            <img src={instagramSvg} alt="instagram" />
+          </a>
+          <a class="w-[14px] h-[14px]" href="#">
+>>>>>>> e2993b5a403d6764bbe7ae084c9589eadd343eaf
             <img src={linkedinSvg} alt="linkedin" />
           </a>
         </div>

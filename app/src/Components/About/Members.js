@@ -42,7 +42,11 @@ function Members() {
     {
       name: 'Diwas Lamichhane',
       imageLink:
+<<<<<<< HEAD
         'https://scontent.fkep2-1.fna.fbcdn.net/v/t39.30808-6/300195356_3888257658073410_6979674478170402837_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=174925&_nc_ohc=1h7K7pJDAGQAX8zxqOy&_nc_ht=scontent.fkep2-1.fna&oh=00_AT84FukHsTu2Eg2dS7Z1Qa4G1N0i72gGlpIPZRB-1fmSog&oe=63319CF7',
+=======
+        'https://images-ext-2.discordapp.net/external/yB3yXP9GE6OT-4D5oxcCMhhELhPOCO-4NIzvtHFrOPE/%3F_nc_cat%3D109%26ccb%3D1-7%26_nc_sid%3D174925%26_nc_ohc%3DBAoXtMXLhP4AX_XFaLg%26_nc_ht%3Dscontent.fktm8-1.fna%26oh%3D00_AT8mz6lyES2HXe1MAbucZfqrcBX7Kz4K4ccMFj4s4aA8ZA%26oe%3D6317E7B7/https/scontent.fktm8-1.fna.fbcdn.net/v/t39.30808-6/300195356_3888257658073410_6979674478170402837_n.jpg?width=403&height=403',
+>>>>>>> e2993b5a403d6764bbe7ae084c9589eadd343eaf
       position: 'Frontend Developer',
       socialLinks: [
         {

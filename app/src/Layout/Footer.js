@@ -67,7 +67,7 @@ function Footer() {
                     <img src={instagramSvg} alt="instagram" />
                   </a>
                   <a class="w-[14px] h-[14px]" href="https://www.linkedin.com/company/71598016/">
-                    <img src={linkedinSvg} alt="linkedin" />
+                    <img src={linkedinSvg} alt="linkedin" />  
                   </a>
                 </div>
               </div>
