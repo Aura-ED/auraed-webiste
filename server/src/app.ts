@@ -43,4 +43,4 @@ app.use('*', (_req: Request, _res: Response, next) => {
   next(new AppError(404, '404 Not Found'));
 });
 
-app.listen(PORT, () => console.log('Server is running on port 3000'));
+app.listen(PORT, () => console.log(`Server is running on port ${PORT}`));
