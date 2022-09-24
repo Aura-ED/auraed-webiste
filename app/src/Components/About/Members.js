@@ -9,7 +9,7 @@ function Members() {
     {
       name: 'Roman Shrestha',
       imageLink:
-        'https://media.discordapp.net/attachments/980147436196597820/1013210227425951814/unknown.png',
+        'https://media.discordapp.net/attachments/980147436196597820/1023048038723375165/romanpic.png',
       position: 'Co-Founder',
       socialLinks: [
         {
@@ -58,7 +58,7 @@ function Members() {
         <div class="self-center text-center space-y-3">
           <h2 class="text-3xl font-bold">Meet Our Team</h2>
           <p class="text-sm max-w-2xl font-semibold text-dark">
-            We are a non-profital organization focusing on child education with
+            We are a non-profit organization focusing on child education with
             technology.
           </p>
         </div>
@@ -80,12 +80,11 @@ function Members() {
                 </div>
                 {/* <!-- Social Links --> */}
                 <div class="flex justify-center space-x-2 pt-2">
-                  <a class="w-[8px] h-[9px] text-primary"  href={member.socialLinks[0].link}>
-                    <img
-                      src={facebookSvg}
-                     
-                      alt="facebook"
-                    />
+                  <a
+                    class="w-[8px] h-[9px] text-primary"
+                    href={member.socialLinks[0].link}
+                  >
+                    <img src={facebookSvg} alt="facebook" />
                   </a>
                 </div>
               </div>

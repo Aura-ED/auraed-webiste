@@ -10,6 +10,7 @@ import { authRouter } from './controllers/authController';
 import { uploadRouter } from './controllers/uploadController';
 import { metaRouter } from './controllers/metaController';
 import { albumRouter } from './controllers/albumController';
+import { PORT } from './config';
 
 const app = express();
 app.disable('etag');
@@ -42,4 +43,4 @@ app.use('*', (_req: Request, _res: Response, next) => {
   next(new AppError(404, '404 Not Found'));
 });
 
-app.listen(8000, () => console.log('Server is running on port 3000'));
+app.listen(PORT, () => console.log('Server is running on port 3000'));
