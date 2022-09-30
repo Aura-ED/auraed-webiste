@@ -5,4 +5,4 @@ export const JWT_REFRESH_SECRET =
   process.env.JWT_REFRESH_SECRET || 'refreshSecret';
 export const JWT_ACCESS_EXPIRES = process.env.JWT_ACCESS_EXPIRES || '1d';
 export const JWT_REFRESH_EXPIRES = process.env.JWT_REFRESH_EXPIRES || '30d';
-export const PORT = 8005;
+export const PORT = 3000;

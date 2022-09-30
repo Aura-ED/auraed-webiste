@@ -33,6 +33,7 @@ app.use('/v1/auth', authRouter);
 app.use('/v1/upload', uploadRouter);
 app.use('/v1/meta', metaRouter);
 app.use('/v1/albums', albumRouter);
+app.use('/v1/metadata', metaRouter);
 
 // Error handlers
 app.use((err: AppError, _req: Request, res: Response, _next: NextFunction) => {
