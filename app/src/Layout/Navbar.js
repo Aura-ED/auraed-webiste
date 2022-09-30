@@ -30,21 +30,21 @@ function Navbar() {
           class="flex items-center space-x-2 text-sm text-white font-semibold"
         >
           <img class="w-[14px] h-[14px]" src={mailSvg} alt="mail" />
-          <span>info@auraed.org</span>
+          <a href='mailto:info@auraed.org'>info@auraed.org</a>
         </div>
 
         {/* <!-- Social Links --> */}
-        <div class="flex items-center justify-between space-x-2">
-          <a class="w-[9px] h-[14px] text-primary" href="#">
+        <div class="flex items-center space-x-2">
+          <a class="w-[8px] h-[13px] text-primary" href=" https://www.facebook.com/auraednepal">
             <img src={facebookSvg} alt="facebook" />
           </a>
-          <a class="w-[14px] h-[14px]" href="#">
+          {/* <a class="w-[14px] h-[14px]" href="#">
             <img src={twitterSvg} alt="twitter" />
-          </a>
-          <a class="w-[14px] h-[14px]" href="#">
+          </a> */}
+          <a class="w-[14px] h-[14px]" href="https://www.instagram.com/auraednepal/">
             <img src={instagramSvg} alt="instagram" />
           </a>
-          <a class="w-[14px] h-[14px]" href="#">
+          <a class="w-[14px] h-[14px]" href="https://www.linkedin.com/company/71598016/">
             <img src={linkedinSvg} alt="linkedin" />
           </a>
         </div>
