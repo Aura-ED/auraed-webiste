@@ -1,6 +1,3 @@
-// This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
-
 generator client {
   provider = "prisma-client-js"
 }
@@ -11,28 +8,26 @@ datasource db {
 }
 
 model User {
-  id           String @id @default(cuid())
+  id           String   @id @default(cuid())
   name         String
-  email        String @unique
+  email        String   @unique
   password     String
-  role         Role   @default(USER)
-  tokenVersion Int    @default(0)
-
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
+  role         Role     @default(USER)
+  tokenVersion Int      @default(0)
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
 }
 
 model Blog {
-  id          String  @id @default(cuid())
+  id          String   @id @default(cuid())
   title       String
   author      String
   description String
   blogUrl     String
+  pinned      Boolean  @default(false)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
   thumbnail   String
-  pinned      Boolean @default(false)
-
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
 }
 
 model Event {
@@ -44,16 +39,23 @@ model Event {
   images      String[]
   startDate   DateTime
   endDate     DateTime
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
 
+model Album {
+  id        String   @id @default(cuid())
+  name      String
+  images    String[]
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 }
 
-model Album {
-  id     String   @id @default(cuid())
-  name   String
-  images String[]
-
+model Metadata {
+  id        String   @id @default(cuid())
+  places    String
+  reach     String
+  events    String
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 }

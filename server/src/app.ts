@@ -33,6 +33,7 @@ app.use('/v1/auth', authRouter);
 app.use('/v1/upload', uploadRouter);
 app.use('/v1/meta', metaRouter);
 app.use('/v1/albums', albumRouter);
+app.use('/v1/metadata', metaRouter);
 
 // Error handlers
 app.use((err: AppError, _req: Request, res: Response, _next: NextFunction) => {
@@ -43,4 +44,4 @@ app.use('*', (_req: Request, _res: Response, next) => {
   next(new AppError(404, '404 Not Found'));
 });
 
-app.listen(PORT, () => console.log('Server is running on port 3000'));
+app.listen(PORT, () => console.log(`Server is running on port ${PORT}`));

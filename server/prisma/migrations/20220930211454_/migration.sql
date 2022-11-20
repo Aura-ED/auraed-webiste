@@ -1,0 +1,3 @@
+-- AlterTable
+ALTER TABLE "Metadata" ALTER COLUMN "places" SET DATA TYPE TEXT,
+ALTER COLUMN "events" SET DATA TYPE TEXT;
