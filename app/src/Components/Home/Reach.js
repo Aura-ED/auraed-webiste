@@ -21,16 +21,16 @@ function Reach() {
         <div className="flex items-between space-y-10 flex-col w-full md:flex-row md:items-start md:w-2/3 md:space-y-0 justify-between md:space-x-10">
           {/* <!-- Reach 1 --> */}
           <div className="md:w-1/3 items-center text-center space-y-3 md:space-y-5">
-            <h2 className="text-5xl font-bold text-white">25</h2>
+            <h2 className="text-5xl font-bold text-white">20+</h2>
             <div className="flex items-center justify-center space-x-3">
               <img className="w-[30px] h-[30px]" src={placesSvg} alt="places" />
-              <h4 className="text-xl text-white">Places</h4>
+              <h4 className="text-xl text-white">Districts</h4>
             </div>
           </div>
 
           {/* <!-- Reach 2 --> */}
           <div className="md:w-1/3 items-center text-center space-y-3 md:space-y-5">
-            <h2 className="text-5xl font-bold text-white">8k+</h2>
+            <h2 className="text-5xl font-bold text-white">6000+</h2>
             <div className="flex items-center justify-center space-x-3">
               <img
                 className="w-[30px] h-[30px]"
@@ -43,7 +43,7 @@ function Reach() {
 
           {/* <!-- Reach 3 --> */}
           <div className="md:w-1/3 items-center text-center space-y-3 md:space-y-5">
-            <h2 className="text-5xl font-bold text-white">67</h2>
+            <h2 className="text-5xl font-bold text-white">70+</h2>
             <div className="flex items-center justify-center space-x-3">
               <img className="w-[30px] h-[30px]" src={eventsSvg} alt="places" />
               <h4 className="text-xl text-white">Events</h4>

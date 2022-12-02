@@ -18,10 +18,21 @@ function Members() {
       ],
     },
     {
-      name: 'Samrid Pandit',
+      name: 'Johnson Subedi',
       imageLink:
-        'https://media.discordapp.net/attachments/980147436196597820/1013205461329248338/unknown.png',
-      position: 'Technical Lead',
+        'https://media.discordapp.net/attachments/980147436196597820/1048307104324264026/image.png?width=819&height=656',
+      position: 'Co-Founder',
+      socialLinks: [
+        {
+          link: 'https://facebook.com',
+        },
+      ],
+    },
+    {
+      name: 'Priyanshu Pokhrel',
+      imageLink:
+        'https://cdn.discordapp.com/attachments/980147436196597820/1048308657089159188/Priyanshu_Pyakurel_Co-Founder.png',
+      position: 'Co-Founder',
       socialLinks: [
         {
           link: 'https://facebook.com',
@@ -40,10 +51,76 @@ function Members() {
       ],
     },
     {
+      name: 'Samrid Pandit',
+      imageLink:
+        'https://media.discordapp.net/attachments/980147436196597820/1013205461329248338/unknown.png',
+      position: 'Technical Lead',
+      socialLinks: [
+        {
+          link: 'https://facebook.com',
+        },
+      ],
+    }, 
+    {
       name: 'Diwas Lamichhane',
       imageLink:
         'https://scontent.fkep2-1.fna.fbcdn.net/v/t39.30808-6/300195356_3888257658073410_6979674478170402837_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=174925&_nc_ohc=1h7K7pJDAGQAX8zxqOy&_nc_ht=scontent.fkep2-1.fna&oh=00_AT84FukHsTu2Eg2dS7Z1Qa4G1N0i72gGlpIPZRB-1fmSog&oe=63319CF7',
       position: 'Frontend Developer',
+      socialLinks: [
+        {
+          link: 'https://facebook.com',
+        },
+      ],
+    },
+    {
+      name: 'Prabin Tiwari',
+      imageLink:
+        'https://cdn.discordapp.com/attachments/980147436196597820/1048307602892804239/image.png',
+      position: 'Executive Member',
+      socialLinks: [
+        {
+          link: 'https://facebook.com',
+        },
+      ],
+    },
+    {
+      name: 'Prashant Panta',
+      imageLink:
+        'https://cdn.discordapp.com/attachments/980147436196597820/1048308266398122034/image.png',
+      position: 'Executive Member',
+      socialLinks: [
+        {
+          link: 'https://facebook.com',
+        },
+      ],
+    },
+    {
+      name: 'Prem Singh Pun Magar',
+      imageLink:
+        'https://cdn.discordapp.com/attachments/980147436196597820/1048308461651365999/Prem_Singh_Pun_Magar_-_Head_of_Content_Creation.jpg',
+      position: 'Lead Content Creation',
+      socialLinks: [
+        {
+          link: 'https://facebook.com',
+        },
+      ],
+    },
+    {
+      name: 'Priyanka Karki',
+      imageLink:
+        'https://cdn.discordapp.com/attachments/980147436196597820/1048308656480989204/Priyanka_karki-_District_Representative.png',
+      position: 'District Representative',
+      socialLinks: [
+        {
+          link: 'https://facebook.com',
+        },
+      ],
+    },
+    {
+      name: 'Ramika Pandey',
+      imageLink:
+        'https://cdn.discordapp.com/attachments/980147436196597820/1048308657420513290/Ramika_Pandey-_Program_manager.jpg',
+      position: 'Program Manager',
       socialLinks: [
         {
           link: 'https://facebook.com',
