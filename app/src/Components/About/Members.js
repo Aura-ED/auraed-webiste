@@ -64,8 +64,8 @@ function Members() {
     {
       name: 'Diwas Lamichhane',
       imageLink:
-        'https://scontent.fkep2-1.fna.fbcdn.net/v/t39.30808-6/300195356_3888257658073410_6979674478170402837_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=174925&_nc_ohc=1h7K7pJDAGQAX8zxqOy&_nc_ht=scontent.fkep2-1.fna&oh=00_AT84FukHsTu2Eg2dS7Z1Qa4G1N0i72gGlpIPZRB-1fmSog&oe=63319CF7',
-      position: 'Frontend Developer',
+        'https://cdn.discordapp.com/attachments/980147436196597820/1059778386312036382/318855047_1196656940937143_568029862979930107_n.png',
+      position: 'Frontend Developer/ Tutor',
       socialLinks: [
         {
           link: 'https://facebook.com',
