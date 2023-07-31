@@ -1,6 +1,7 @@
 import { Router } from "express";
 import expressAsyncHandler from "express-async-handler";
 import multer from "multer";
+import path from "path";
 
 export const uploadRouter = Router();
 const upload = multer({ dest: "uploads/" });
@@ -29,7 +30,7 @@ uploadRouter.get(
   "/:filename",
   expressAsyncHandler(async (req, res) => {
     const fileName = req.params.filename;
-    const filePath = `${__dirname}/../../uploads/${fileName}`;
+    const filePath = path.join(__dirname, `../../uploads/${fileName}`);
     res.status(200).sendFile(filePath);
   })
 );

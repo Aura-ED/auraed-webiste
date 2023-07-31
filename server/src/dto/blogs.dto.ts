@@ -1,11 +1,4 @@
-import {
-  IsBoolean,
-  IsNotEmpty,
-  IsOptional,
-  IsString,
-  IsUrl,
-  Length,
-} from "class-validator";
+import { IsBoolean, IsString, IsUrl, Length } from "class-validator";
 
 export class CreateBlogDto {
   @IsString()
@@ -30,4 +23,4 @@ export class CreateBlogDto {
   pinned: boolean;
 }
 
-export class UpdateBlogDto implements Partial<CreateBlogDto> {}
+export class UpdateBlogDto implements Partial<CreateBlogDto> { }

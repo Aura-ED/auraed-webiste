@@ -51,6 +51,18 @@ model Album {
   updatedAt DateTime @updatedAt
 }
 
+model Course {
+  id          String @id @default(cuid())
+  title       String
+  description String
+  thumbnail   String
+  youtubeLink String
+  pdf         String
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
 model Metadata {
   id        String   @id @default(cuid())
   places    String

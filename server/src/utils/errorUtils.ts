@@ -34,12 +34,12 @@ const sendErrorDev = (err: AppError, res: Response) => {
 };
 
 export const handleError = (err: AppError, res: Response) => {
-  if (process.env.NODE_ENV === "development") {
-    sendErrorDev(err, res);
-  }
   if (process.env.NODE_ENV === "production") {
     let error = { ...err };
     error.message = err.message;
     sendErrorProd(error, res);
+    return;
   }
+  sendErrorDev(err, res);
+  console.error(err);
 };
