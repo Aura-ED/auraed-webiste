@@ -1,0 +1,75 @@
+.pagination {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+}
+
+.pagination li {
+    margin: 0 5px;
+}
+
+.pagination li a {
+    display: inline-block;
+    padding: 8px 12px;
+    border-radius: 4px;
+    background-color: #ccc;
+    color: #fff;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.pagination li.active a {
+    background-color: #008CBA;
+}
+
+.pagination li a:hover {
+    background-color: #555;
+}
+
+.containerok{
+    padding: 50px 100px;
+}
+
+.oneimage{
+    height: 450px;
+    width:600px;
+    margin-right: 20px;
+}
+
+
+@media screen and (max-width: 900px) {
+    .oneimage{
+        height: 400px;
+        width:400px;
+        margin-top: 70px;
+    }
+    .containerok{
+        padding: 50px 30px;
+    }
+    
+
+}
+
+@media screen and (max-width: 750px) {
+    .oneimage{
+        height: 350px;
+        width:300px;
+        margin-top: 70px;
+    }
+}
+@media screen and (max-width: 600px) {
+    .oneimage{
+        height: 350px;
+        width:250px;
+    }
+
+}
+    @media screen and (max-width: 450px) {
+        .oneimage{
+            height: 350px;
+            width:300px;
+            margin-right: 140px;
+        }
+}
+    

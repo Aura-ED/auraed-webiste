@@ -10,6 +10,8 @@ import Blogs from "./Components/Blogs/Blogs";
 import Albums from "./Components/Albums/Albums";
 import Events from "./Components/Events/Events";
 import Donate from "./Components/Donate/Donate";
+import FreeCourse from "./Components/FreeCourse/FreeCourse";
+import Test from "./Components/FreeCourse/Test";
 
 const queryClient = new QueryClient();
 
@@ -27,6 +29,10 @@ function App() {
             <Route exact path="/albums" element={<Albums />} />
             <Route exact path="/events" element={<Events />} />
             <Route exact path="/donate" element={<Donate />} />
+            <Route exact path="/freecourse" element={<FreeCourse />} />
+            <Route exact path="/test" element={<Test />} />
+      {/* Add the route for the 'Test' component with the 'id' parameter */}
+      <Route exact path="/test/:id" element={<Test />} />
           </Routes>
           <Footer />
         </Router>
