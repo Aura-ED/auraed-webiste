@@ -29,7 +29,7 @@ function Members() {
       ],
     },
     {
-      name: 'Priyanshu Pokhrel',
+      name: 'Priyanshu Pyakurel',
       imageLink:
         'https://cdn.discordapp.com/attachments/980147436196597820/1048308657089159188/Priyanshu_Pyakurel_Co-Founder.png',
       position: 'Co-Founder',
